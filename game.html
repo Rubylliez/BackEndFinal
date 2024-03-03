@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&B | Puzzle Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- link to favicon -->
+    <link rel="icon" href="pics/favicon.png" type="image/x-icon">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="pics/favicon.png" height="60">
+            A&B
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="index.html" style="--i:0;">Home</a>
+            <a href="recipes.html" style="--i:1;">Recipes</a>
+            <a href="aboutus.html" style="--i:2;">About us</a>
+            <a href="videos.html" style="--i:3;">Videos</a>
+            <a href="#" style="--i:4;">Game</a>
+        </nav>
+    </header>
+
+    <div class="cover-screen">
+        <p id="result"></p>
+        <button id="start-button">Start Game</button>
+        <p>Relax and enjoy the game while your food is being prepared. Dive into the Halloween-themed puzzle fun!</p>
+    </div>
+    <div id="moves"></div>
+    <div class="slider-game">
+        <div class="container"></div>
+        <div class="original-image">
+            <img src="pics/original.jpg" alt="">
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="js/game.js"></script>
+</body>
+
+</html>

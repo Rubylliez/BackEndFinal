@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu</title>
+<!-- links to Bootstrap, Font Awesome, and CSS file -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- link to favicon -->
+<link rel="icon" href="pics/favicon.png" type="image/x-icon">
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="pics/favicon.png" height="60">
+        PizzaHub
+    </a>
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    <nav class="navbar">
+    <a href="index.html" style="--i:0;">Home</a>
+    <a href="menu.html" style="--i:1;">Menu</a>
+    <a href="aboutus.html" style="--i:2;">About us</a>
+    <a href="live.html" style="--i:3;">Live</a>
+    <a href="#" style="--i:4;">Account</a>
+    </nav>
+</header>
+
+<section class="profile">
+    <div class="container">
+        <div class="profile-title">Personal data</div>
+        <form>
+            <div class="wrapper-wrap">
+                <div class="profile-wrapper">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" type="text" placeholder="First name" readonly>
+                </div>
+                <div class="profile-wrapper">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" type="text" placeholder="Last name" readonly>
+                </div>
+            </div>
+            <div class="wrapper-wrap">
+                <div class="profile-wrapper">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="Email" >
+                </div>
+                <div class="profile-wrapper">
+                    <label for="phoneNumber">Phone number</label>
+                    <input id="phoneNumber" type="text" placeholder="Phone number" readonly>
+                </div>
+            </div>
+            <div class="wrapper-wrap">
+                <div class="profile-wrapper">
+                    <label for="username">Username</label>
+                    <input id="username" type="text" placeholder="Username" readonly>
+                </div>
+                <div class="profile-wrapper">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" placeholder="**********" >
+                </div>
+            </div>
+            <button onclick="updateUserData()" class="item-btn fill" style="width: 100px;">Save</button>
+        </form>
+        <br>
+        <hr>
+        <br>
+        <div class="profile-title">Order history <span class="bonus">1500 coins</span></div>
+        <div class="history" id="orderHistory"></div>
+        <button id="showMoreBtn" onclick="showMoreOrders()">Show More</button>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">contacts</a></li>
+                    <li><a href="#">terms of service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">news</a></li>
+                    <li><a href="#">features</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>pizzas</h4>
+                <ul>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">specials</a></li>
+                    <li><a href="#">customize</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<button id="scrollToTopBtn" onclick="scrollToTop()">
+<i class="fas fa-arrow-up"></i> 
+</button>
+
+<!-- links to Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        getUserProfile();
+        getOrderHistory(5); // Показывать только 5 заказов при загрузке страницы
+    });
+    
+    async function getUserProfile() {
+        try {
+            const response = await fetch('http://localhost:3000/getUserProfile', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}` // Передаем JWT токен для аутентификации
+                }
+            });
+            const data = await response.json();
+
+            document.getElementById('firstName').value = data.firstName;
+            document.getElementById('lastName').value = data.lastName;
+            document.getElementById('email').value = data.email;
+            document.getElementById('phoneNumber').value = data.phoneNumber;
+            document.getElementById('username').value = data.username;
+        } catch (error) {
+            console.error('Ошибка при получении данных о пользователе:', error);
+        }
+
+    }
+
+    async function updateUserData() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        const updatedData = {};
+
+        // Проверяем, чтобы поля не были пустыми, и добавляем их в объект обновленных данных
+        if (email) {
+            updatedData.email = email;
+        }
+        if (password) {
+            updatedData.password = password;
+        }
+        console.log(updatedData)
+        const token = localStorage.getItem('token');
+        const response = await fetch('http://localhost:3000/updateUserData', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}` // Добавляем заголовок с токеном
+            },
+            body: JSON.stringify(updatedData) // Отправляем только обновленные данные
+            });
+
+        if (response.ok) {
+        // Обработка успешного обновления данных
+        console.log('Данные пользователя успешно обновлены');
+        alert('Данные пользователя успешно обновлены');
+
+        // Вызываем getUserProfile для обновления отображаемых данных на странице
+        await getUserProfile();
+        } else {
+            // Обработка ошибки
+            console.error('Ошибка при обновлении данных пользователя');
+            alert('Ошибка при обновлении данных пользователя');
+        }
+    }
+
+    async function getOrderHistory(limit) {
+        try {
+            const response = await fetch('http://localhost:3000/orderHistory', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                }
+            });
+            const data = await response.json();
+
+            const orderHistoryElement = document.getElementById('orderHistory');
+
+            // Очищаем содержимое элемента истории заказов перед добавлением новых данных
+            orderHistoryElement.innerHTML = '';
+
+            if (data && data.orders && Array.isArray(data.orders)) {
+                let ordersToShow = data.orders.slice(0, limit); // Выбираем только нужное количество заказов
+                ordersToShow.forEach(order => {
+                    const orderItem = document.createElement('div');
+                    orderItem.classList.add('history-item');
+
+                    const orderDate = document.createElement('div');
+                    orderDate.classList.add('history-date');
+                    orderDate.textContent = new Date(order.orderDate).toLocaleDateString(); // Преобразуем дату в формат строки
+                    orderItem.appendChild(orderDate);
+
+                    const orderDetails = document.createElement('div');
+                    for (const [itemName, itemPrice] of Object.entries(order.cartItems)) { // Перебираем каждый товар в заказе
+                        const itemElement = document.createElement('div');
+                        itemElement.classList.add('history-position');
+                        itemElement.textContent = `${itemName} - ${itemPrice} tg`; // Отображаем название и цену товара
+                        orderDetails.appendChild(itemElement);
+                    }
+                    orderItem.appendChild(orderDetails);
+
+                    const orderPrice = document.createElement('div');
+                    orderPrice.classList.add('history-price');
+                    orderPrice.textContent = `${order.totalPrice} tg`;
+                    orderItem.appendChild(orderPrice);
+
+                    orderHistoryElement.appendChild(orderItem);
+                });
+
+                // Прокручиваем страницу вниз, чтобы показать новые заказы
+                orderHistoryElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                console.log("Нет данных о заказах");
+            }
+        } catch (error) {
+            console.error('Ошибка при получении истории заказов:', error);
+        }
+    }
+
+    async function showMoreOrders() {
+        // Показываем еще 5 заказов
+        const currentOrders = document.querySelectorAll('.history-item').length;
+        getOrderHistory(currentOrders + 5);
+    }
+</script>
+</body>
+</html>

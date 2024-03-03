@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <!-- links to Bootstrap, Font Awesome, and CSS file -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- link to favicon -->
+  <link rel="icon" href="pics/favicon.png" type="image/x-icon">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="pics/favicon.png" height="60">
+        PizzaHub
+    </a>
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    <nav class="navbar">
+      <a href="index.html" style="--i:0;">Home</a>
+      <a href="menu.html" style="--i:1;">Menu</a>
+      <a href="aboutus.html" style="--i:2;">About us</a>
+      <a href="live.html" style="--i:3;">Live</a>
+      <a href="login.html" style="--i:4;">Account</a>
+    </nav>
+</header>
+
+
+<section class="account login">
+    <div class="containerr">
+        <div class="account-title">Login</div>
+        <p class="account-text">Don't have an account? <a href="register.html" class="account-link">Register</a></p>
+        <form id="loginForm" action="/login" method="post">
+          <div class="form-wrapper">
+              <label for="username">Username</label>
+              <input id="username" type="text" placeholder="Username" required>
+          </div>
+          <div class="form-wrapper">
+              <label for="password">Password</label>
+              <input id="password" type="password" placeholder="Password" required>
+          </div>
+          <input type="submit" value="Login">
+      </form>      
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">contacts</a></li>
+                    <li><a href="#">terms of service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">news</a></li>
+                    <li><a href="#">features</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>pizzas</h4>
+                <ul>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">specials</a></li>
+                    <li><a href="#">customize</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<button id="scrollToTopBtn" onclick="scrollToTop()">
+  <i class="fas fa-arrow-up"></i> 
+</button>
+
+<!-- links to Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<script>
+    // Функция для отправки данных формы на сервер
+    async function loginUser() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+  
+      try {
+        const response = await fetch('http://localhost:3000/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ username, password })
+        });
+  
+        const data = await response.json();
+  
+        if (response.ok) {
+          // Если вход выполнен успешно, сохраняем токен в localStorage
+          localStorage.setItem('token', data.token);
+          // Можно также сохранить другие данные, например, бонусы пользователя
+          localStorage.setItem('bonuses', data.bonuses);
+          // Перенаправляем пользователя на другую страницу или делаем что-то еще
+          window.location.href = '/index.html'; // Пример перенаправления на страницу после входа
+        } else {
+          // Если произошла ошибка, отображаем сообщение об ошибке
+          alert(data.message);
+        }
+      } catch (error) {
+        console.error('Ошибка при отправке запроса:', error);
+        // Отображаем сообщение об ошибке в случае проблем с сетью или сервером
+        alert('Произошла ошибка. Пожалуйста, повторите попытку позже.');
+      }
+    }
+  
+    // Обработчик события отправки формы
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+      loginUser(); // Вызываем функцию для отправки данных на сервер
+    });
+  </script>
+  
+
+</body>
+</html>

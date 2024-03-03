@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <!-- links to Bootstrap, Font Awesome, and CSS file -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- link to favicon -->
+  <link rel="icon" href="pics/favicon.png" type="image/x-icon">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="pics/favicon.png" height="60">
+        PizzaHub
+    </a>
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    <nav class="navbar">
+      <a href="index.html" style="--i:0;">Home</a>
+      <a href="menu.html" style="--i:1;">Menu</a>
+      <a href="aboutus.html" style="--i:2;">About us</a>
+      <a href="live.html" style="--i:3;">Live</a>
+      <a href="#" id="accountLink" style="--i:4;">Account</a>
+    </nav>
+</header>
+
+<section class="menu">
+  <div class="containerr">
+    <div class="menu-nav">
+      <a href="#pizza" class="menu-link">Pizza</a>
+      <a href="#drinks" class="menu-link">Drinks</a>
+      <a href="#desserts" class="menu-link">Desserts</a>
+    </div>
+    <div class="menu-cols">
+      <div class="positions">
+        <div class="menu-section" id="pizza">
+          <div class="section-title">Pizza</div>
+          <div class="section-items">
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/b9e9517672f94fd98640017e61d35205_584x584.webp" alt="pepperoni" class="item-img">
+              <div class="item-title">Pepperoni Fresh</div>
+              <div class="item-description">Chicken pepperoni, extra mozzarella cheese, tomatoes, marinara sauce</div>
+              <div class="item-bottom">
+                <div class="item-price">1900 tg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/9f32d6faf1354a35af835143ff52a68f_292x292.webp" alt="cheesy" class="item-img">
+              <div class="item-title">Cheesy</div>
+              <div class="item-description">Mozzarella cheese, cheddar cheese, parmesan cheese, Alfredo sauce</div>
+              <div class="item-bottom">
+                <div class="item-price">1900 tg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/fecb0ce138ab40ccbfc15f664f1db408_292x292.webp" alt="chirozo" class="item-img">
+              <div class="item-title">Chorizo fresh</div>
+              <div class="item-description">Spicy chorizo, sweet pepper, mozzarella cheese, marinara sauce</div>
+              <div class="item-bottom">
+                <div class="item-price">1900 tg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/b9e9517672f94fd98640017e61d35205_584x584.webp" alt="bbq" class="item-img">
+              <div class="item-title">BBQ Chicken</div>
+              <div class="item-description">Chicken, chicken ham, barbecue sauce, red onion, mozzarella cheese, marinara sauce</div>
+              <div class="item-bottom">
+                <div class="item-price">2700 tg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <br><br>
+        <hr>
+        <br><br>
+    
+        <div class="menu-section" id="drinks">
+          <div class="section-title">Drinks</div>
+          <div class="section-items">
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/e8bd43f071c84eaeb7e2503377215e0e_292x292.webp" alt="cranberry-fruit" class="item-img">
+              <div class="item-title">Cranberry Fruit Drink</div>
+              <div class="item-description">What a cheeky berry! Our signature fruit drink for a true sweet sourness lover</div>
+              <div class="item-bottom">
+                <div class="item-price">900 tg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/417e16f3878a4a6ba4af4ab04d3af636_292x292.webp" alt="black-currant-fruit" class="item-img">
+              <div class="item-title">Black currant Fruit Drink</div>
+              <div class="item-description">We highly recommend to close your eyes and imagine being in your grandma’s garden for a better appreciation of the drink</div>
+              <div class="item-bottom">
+                <div class="item-price">900 rg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/76e8100ce3554ab39526d4203fc655bb_292x292.webp" alt="cherry-fruit" class="item-img">
+              <div class="item-title">Cherry Fruit Drink</div>
+              <div class="item-description">A nostalgia-flavoured drink – summer holidays, warm days and comfy summer get-togethers. And no cherry stones!</div>
+              <div class="item-bottom">
+                <div class="item-price">900 tg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/1dd821153839400faeaf556addfffc85_292x292.webp" alt="asu" class="item-img">
+              <div class="item-title">ASU</div>
+              <div class="item-description">Simple still bottle of water</div>
+              <div class="item-bottom">
+                <div class="item-price">600 tg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <br><br>
+        <hr>
+        <br><br>
+    
+        <div class="menu-section" id="desserts">
+          <div class="section-title">Desserts</div>
+          <div class="section-items">
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/94a6289ef08f48119920fb32b2595dbc_292x292.webp" alt="new-york" class="item-img">
+              <div class="item-title">New York Cheesecake</div>
+              <div class="item-description">We’ve tried a thousand desserts and finally found our guests’ favourite one – a splendid curd cheesecake</div>
+              <div class="item-bottom">
+                <div class="item-price">1300 tg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/aa705198506848f5912faee038e5f9ae_292x292.webp" alt="rolls" class="item-img">
+              <div class="item-title">Lingonberry Rolls</div>
+              <div class="item-description">A bright mix of lingonberries and condensed milk swirled in these sweet rolls</div>
+              <div class="item-bottom">
+                <div class="item-price">1100 tg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/15e6d53ff8bf4e9b8b091b7c78c6c108_292x292.webp" alt="macaron" class="item-img">
+              <div class="item-title">Mango-passion fruit macaron</div>
+              <div class="item-description">Bon appétit! Poplar French dessert with tropical fruit flavor</div>
+              <div class="item-bottom">
+                <div class="item-price">700 tg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+            <div class="section-item">
+              <img src="https://dodopizza-a.akamaihd.net/static/Img/Products/8a9f7b75deca4b06b64ee65915a84089_292x292.webp" alt="fritters" class="item-img">
+              <div class="item-title">Curd fritters with raspberry jam</div>
+              <div class="item-description">The favourite dessert of many of our guests is oven-baked curd fritters. Soft and moderately sweet, they'll take you back to your childhood</div>
+              <div class="item-bottom">
+                <div class="item-price">2700 tg</div>
+                <button class="item-btn">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cart">
+          <div class="cart-title">Your order <span id="deliveryTime" class="little-bonus"></span></div>
+          <hr class="cart-hr">
+          <div class="cart-items">
+            <div class="cart-wrapper">
+
+            </div>
+          </div>
+          <hr class="cart-hr">
+          <div>
+            <div class="total-price">Total Price: <span class="total-price">0</span> tg</div>
+            <div class="bonuses-count">Number of Bonuses: <span class="bonuses">230</span></div>
+            <div>
+              <label for="banuses"><input type="checkbox"name="banuses" class="spend-bonuses-checkbox" />Spend bonuses?</label>
+            </div>
+          </div>
+          <hr class="cart-hr">
+          <div class="cart-buttons">
+            <button class=" pay-btn">Pay</button>
+            <button class="clear-cart-btn">Clear Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal" id="orderModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Confirmation</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <div class="cart-items-summary">
+          <!-- Selected items will be appended here -->
+        </div>
+        <p>Total Price: <span id="modalTotalPrice">0</span> tg</p>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="confirmOrderBtn">Confirm Order</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-container">
+      <div class="row">
+          <div class="footer-col">
+              <h4>company</h4>
+              <ul>
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">contacts</a></li>
+                  <li><a href="#">terms of service</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">news</a></li>
+                  <li><a href="#">features</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>pizzas</h4>
+              <ul>
+                  <li><a href="#">menu</a></li>
+                  <li><a href="#">specials</a></li>
+                  <li><a href="#">customize</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<button id="scrollToTopBtn" onclick="scrollToTop()">
+  <i class="fas fa-arrow-up"></i> 
+</button>
+
+<!-- links to Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const accountLink = document.getElementById('accountLink');
+
+    // Проверяем наличие токена при загрузке страницы
+    const token = localStorage.getItem('token');
+    if (token) {
+        // Если токен существует, перенаправляем на страницу profile.html
+        accountLink.href = 'profile.html';
+    } else {
+        // Если токена нет, перенаправляем на страницу login.html
+        accountLink.href = 'login.html';
+    }
+});
+
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    const deliveryTimeElement = document.getElementById('deliveryTime');
+
+    const randomDeliveryTime = Math.floor(Math.random() * (37 - 26 + 1)) + 26;
+
+    deliveryTimeElement.innerHTML = `Delivery time ${randomDeliveryTime}`;
+
+    const items = document.querySelectorAll('.item-btn');
+    const payBtn = document.querySelector('.pay-btn');
+    const cartWrapper = document.querySelector('.cart-wrapper');
+    const clearCartBtn = document.querySelector('.clear-cart-btn'); // Selecting the clear button
+    const totalPriceElement = document.querySelector('.total-price'); // Selecting the total price element
+    const bonusesElement = document.querySelector('.bonuses'); // Selecting the bonuses element
+    const spendBonusesCheckbox = document.querySelector('.spend-bonuses-checkbox'); // Selecting the spend bonuses checkbox
+    let cartItems = {}; // Object to store item quantities
+    let totalPrice = 0; // Variable to store total price
+    let bonuses = 400; // Initial number of bonuses
+
+    function updateTotalPrice() {
+      totalPrice = 0;
+      Object.values(cartItems).forEach(itemPrice => {
+        totalPrice += itemPrice;
+      });
+
+      if (spendBonusesCheckbox.checked) {
+        totalPrice -= bonuses; // Deduct bonuses if the checkbox is checked
+      }
+
+      totalPriceElement.textContent = totalPrice.toFixed(2);
+    }
+
+
+    function updateBonuses() {
+      bonusesElement.textContent = bonuses;
+    }
+
+    items.forEach(item => {
+      item.addEventListener('click', function() {
+        const itemContainer = this.closest('.section-item');
+        const itemName = itemContainer.querySelector('.item-title').textContent;
+        const itemPrice = parseFloat(itemContainer.querySelector('.item-price').textContent);
+
+        // Update or add quantity to the cartItems object
+        if (cartItems[itemName]) {
+          cartItems[itemName] += itemPrice;
+        } else {
+          cartItems[itemName] = itemPrice;
+        }
+
+        // Create a new cart item
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+        cartItem.innerHTML = `
+          <span class="cart-item-name">${itemName} x${cartItems[itemName]}</span>
+          <span class="cart-item-price">${itemPrice.toFixed(2)}</span>
+        `;
+
+        // Append the cart item to the cart wrapper
+        cartWrapper.appendChild(cartItem);
+
+        // Update total price
+        updateTotalPrice();
+      });
+    });
+
+    // Function to clear the cart
+    function clearCart() {
+      cartWrapper.innerHTML = ''; // Очищаем содержимое корзины
+      cartItems = {}; // Сбрасываем объект корзины
+      updateTotalPrice(); // Обновляем общую сумму
+    }
+
+    clearCartBtn.addEventListener('click', clearCart);
+
+
+    // Event listener for spend bonuses checkbox
+    spendBonusesCheckbox.addEventListener('change', function() {
+      updateTotalPrice(); // Update total price
+    });
+
+    // Initial updates
+    updateTotalPrice();
+    updateBonuses();
+
+    // Функция для отображения модального окна с данными о заказе
+    function showOrderModal() {
+      const modal = new bootstrap.Modal(document.getElementById('orderModal')); // Создаем объект модального окна
+      const cartItemsSummary = document.querySelector('.cart-items-summary'); // Находим контейнер для выбранных товаров
+      cartItemsSummary.innerHTML = ''; // Очищаем его перед заполнением
+
+      // Проходимся по объекту корзины и добавляем каждый товар в модальное окно
+      Object.entries(cartItems).forEach(([itemName, itemPrice]) => {
+        const itemSummary = document.createElement('div');
+        itemSummary.innerHTML = `${itemName}: ${itemPrice.toFixed(2)} tg`;
+        cartItemsSummary.appendChild(itemSummary);
+      });
+
+      const modalTotalPrice = document.getElementById('modalTotalPrice'); // Находим элемент с общей суммой
+      modalTotalPrice.textContent = totalPrice.toFixed(2); // Устанавливаем в него общую сумму заказа
+
+      modal.show(); // Показываем модальное окно
+    }
+
+    // Назначаем обработчик события на кнопку оплаты
+    payBtn.addEventListener('click', showOrderModal);
+
+        // Функция для отправки данных о заказе на сервер
+    async function sendOrderDataToServer() {
+      try {
+        const token = localStorage.getItem('token'); // Получаем JWT из локального хранилища
+        const payload = { cartItems, totalPrice };
+        console.log("Я тут", payload)
+        const response = await fetch('http://localhost:3000/pay', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}` // Включаем токен в заголовок запроса
+          },
+          body: JSON.stringify(payload)
+        });
+        if (!response.ok) {
+          throw new Error('Ошибка при сохранении заказа на сервере');
+        }
+
+        const responseData = await response.json();
+        alert('Заказ успешно оплачен! Номер заказа: ' + responseData.orderId);
+      } catch (error) {
+        console.error('Ошибка при отправке данных о заказе на сервер:', error);
+        alert('Произошла ошибка при оплате заказа. Пожалуйста, попробуйте еще раз.');
+      }
+    }
+
+          // Назначаем обработчик события на кнопку подтверждения заказа
+      const confirmOrderBtn = document.getElementById('confirmOrderBtn');
+      confirmOrderBtn.addEventListener('click', function() {
+        sendOrderDataToServer(); // Отправляем данные о заказе на сервер
+      });
+
+});
+
+</script>
+
+</body>
+</html>

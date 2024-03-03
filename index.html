@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Delivery</title>
+    <!-- links to Bootstrap, Font Awesome, and CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- link to favicon -->
+    <link rel="icon" href="pics/favicon.png" type="image/x-icon">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Unicons CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="pics/favicon.png" height="60">
+        PizzaHub
+    </a>
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    <nav class="navbar">
+        <a href="#" style="--i:0;">Home</a>
+        <a href="menu.html" style="--i:1;">Menu</a>
+        <a href="aboutus.html" style="--i:2;">About us</a>
+        <a href="live.html" style="--i:3;">Live</a>
+        <a href="login.html" style="--i:4;">Account</a>
+    </nav>
+</header>
+
+<!-- Home Page Content -->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-white text-center">
+        <h1 class="display-4">Welcome to PizzaHub</h1>
+        <p class="lead">Order delicious pizzas online and enjoy doorstep delivery.</p>
+    </div>
+</div>
+<br><br>
+<!-- Featured Pizzas Section -->
+<section class="featured-pizzas">
+    <div class="container">
+        <h2 class="text-center mb-4">Featured Pizzas</h2>
+        <div class="row">
+            <!-- Pizza Cards/Containers -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="pics/margarita.jpg" class="card-img-top" alt="Pizza 1 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Margherita Pizza</h5>
+                        <p class="card-text">Classic Margherita with tomato, mozzarella, and basil.</p>
+                        <a href="menu.html" class="btn btn-primary">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="pics/pepperoni.jpg" class="card-img-top" alt="Pizza 2 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Pepperoni Pizza</h5>
+                        <p class="card-text">Loaded with pepperoni, cheese, and savory tomato sauce.</p>
+                        <a href="menu.html" class="btn btn-primary">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="pics/meat.jpg" class="card-img-top" alt="Pizza 3 Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Meat Lover's Pizza</h5>
+                        <p class="card-text">A carnivore's delight with a variety of meats and cheeses.</p>
+                        <a href="menu.html" class="btn btn-primary">Order Now</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<!-- Customer Reviews Section -->
+<section id="customer-reviews" class="bg-light">
+    <div class="container-lg">
+        <div class="text-center">
+            <br>
+            <h2>Customer Reviews</h2>
+            <p class="lead">See what our customers are saying about PizzaHub's delivery service:</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="list-group">
+                    <div class="list-group-item py-3">
+                        <h5 class="mb-1">Fast and Reliable</h5>
+                        <p class="mb-1">PizzaHub's delivery is impressively fast! I always receive my orders on time, and the pizzas are piping hot. Great service!</p>
+                        <small>Review by Daulet</small>
+                    </div>
+                    <div class="list-group-item py-3">
+                        <h5 class="mb-1">Love the Tracking Feature</h5>
+                        <p class="mb-1">The real-time tracking feature is a game-changer. I can plan my time knowing exactly when to expect my delicious pizza. Kudos to PizzaHub!</p>
+                        <small>Review by Baurzhan</small>
+                    </div>
+                    <div class="list-group-item py-3">
+                        <h5 class="mb-1">Safe and Convenient</h5>
+                        <p class="mb-1">I appreciate PizzaHub's commitment to safety. The contactless delivery gives me peace of mind, and the convenience is unmatched.</p>
+                        <small>Review by Kudaybergen</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">contacts</a></li>
+                    <li><a href="#">terms of service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">news</a></li>
+                    <li><a href="#">features</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>pizzas</h4>
+                <ul>
+                    <li><a href="#">menu</a></li>
+                    <li><a href="#">specials</a></li>
+                    <li><a href="#">customize</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<button id="scrollToTopBtn" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i> 
+</button>
+
+<!-- links to Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const isLoggedIn = localStorage.getItem("token") !== null; // Проверяем, есть ли токен в localStorage
+    const accountLink = document.querySelector('a[href="login.html"]'); // Находим ссылку на страницу входа
+    if (isLoggedIn) {
+        accountLink.href = 'profile.html'; // Если пользователь авторизован, изменяем ссылку на страницу профиля
+    }
+});
+</script>
+
+</body>
+</html>

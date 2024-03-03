@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+  <!-- links to Bootstrap, Font Awesome, and CSS file -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- link to favicon -->
+  <link rel="icon" href="pics/favicon.png" type="image/x-icon">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <img src="pics/favicon.png" height="60">
+        A&B
+    </a>
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    <nav class="navbar">
+        <a href="index.html" style="--i:0;">Home</a>
+        <a href="#" style="--i:1;">Recipes</a>
+        <a href="aboutus.html" style="--i:2;">About us</a>
+        <a href="videos.html" style="--i:3;">Videos</a>
+        <a href="game.html" style="--i:4;">Game</a>
+    </nav>
+</header>
+
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="pics/slide-1.jpg" class="d-block w-100" alt="slide1">
+      <div class="carousel-caption d-md-block">
+        <h5>Easy and Accessible Recipes</h5>
+        <p>Discover quick and delicious dishes you can make effortlessly.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="pics/slide-2.jpg" class="d-block w-100" alt="slide2">
+      <div class="carousel-caption d-md-block">
+        <h5>Simple Meal Plans</h5>
+        <p>Explore meal plans that make cooking a breeze.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="pics/slide-3.jpg" class="d-block w-100" alt="slide3">
+      <div class="carousel-caption d-md-block">
+        <h5>Delicious Homemade Creations</h5>
+        <p>Create amazing dishes from scratch with our recipes.</p>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<hr>
+<br>
+
+<!-- Recipes -->
+<main class="page">
+  <div class="recipe-page">
+    <section class="recipe-hero">
+      <img src="pics/recipe1.jpg" class="img recipe-hero-img" alt="Belgian Waffle"/>
+      <article class="recipe-info">
+        <h2>Belgian Waffle</h2>
+        <p>
+          The Belgian waffle is a delightful treat, boasting its airy yet crispy texture that melts in your mouth. The batter is rich, light, and fluffy, creating a perfect base for any toppings.
+        </p>
+        <div class="recipe-icons">
+          <article>
+            <i class="fas fa-clock" id="prep-time"></i>
+            <p class="clue" id="prep-time-clue">This is the prep time clue!</p>
+            <h5>prep time</h5>
+            <p>20 min.</p>
+          </article>
+          <article>
+            <i class="far fa-clock" id="cook-time"></i>
+            <p class="clue" id="cook-time-clue">This is the cook time clue!</p>
+            <h5>cook time</h5>
+            <p>10 min.</p>
+          </article>
+          <article>
+            <i class="fas fa-user-friends" id="serving"></i>
+            <p class="clue" id="serving-clue">This is the serving clue!</p>
+            <h5>serving</h5>
+            <p>4 servings</p>
+          </article>
+        </div>
+      </article>
+    </section>
+    <!-- Content -->
+    <section class="recipe-content">
+      <article>
+        <h4>Instructions</h4>
+        <br>
+        <!-- Instruction -->
+        <div class="single-instruction">
+          <header>
+            <p>step 1</p>
+            <div></div>
+          </header>
+          <p>
+            Preheat your waffle iron according to the manufacturer's instructions.
+          </p>
+        </div>
+        
+        <div class="single-instruction">
+          <header>
+            <p>step 2</p>
+            <div></div>
+          </header>
+          <p>
+            In a large mixing bowl, combine the flour, sugar, baking powder, and salt.
+          </p>
+        </div>
+        
+        <div class="single-instruction">
+          <header>
+            <p>step 3</p>
+            <div></div>
+          </header>
+          <p>
+            Separate the egg whites and yolks. Beat the egg whites until stiff peaks form.
+          </p>
+        </div>
+       
+      </article>
+      <article class="second-column">
+        <div>
+          <h4>Ingredients</h4>
+          <br>
+          <p class="single-ingredient">2 cups all-purpose flour; 2 tablespoons granulated sugar</p>
+          <p class="single-ingredient">1 tablespoon baking powder; 1/2 teaspoon salt</p>
+          <p class="single-ingredient">2 large eggs, separated; 1 3/4 cups milk</p>
+          <p class="single-ingredient">1/2 cup unsalted butter, melted; 1 teaspoon vanilla extract</p>
+        </div>
+      </article>
+    </section>
+  </div>
+  <div class="rating-box">
+    <header>Rate the recipe</header>
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+    </div>
+  </div>
+  <hr>
+  <br>
+
+  <div class="recipe-page">
+    <section class="recipe-hero">
+      <img src="pics/recipe2.jpg" class="img recipe-hero-img" alt="Shakshuka"/>
+      <article class="recipe-info">
+        <h2>Shakshuka</h2>
+        <p>
+          Shakshuka is a flavorful dish made with poached eggs in a spicy tomato and pepper sauce, usually seasoned with various spices. It's a hearty and delicious meal that's perfect for breakfast or brunch.
+        </p>
+        <div class="recipe-icons">
+          <article>
+            <i class="fas fa-clock"></i>
+            <h5>prep time</h5>
+            <p>10 min.</p>
+          </article>
+          <article>
+            <i class="far fa-clock"></i>
+            <h5>cook time</h5>
+            <p>25 min.</p>
+          </article>
+          <article>
+            <i class="fas fa-user-friends"></i>
+            <h5>serving</h5>
+            <p>2 servings</p>
+          </article>
+        </div>
+      </article>
+    </section>
+
+    <section class="recipe-content">
+      <article>
+        <h4>Instructions</h4>
+        <br>
+
+        <div class="single-instruction">
+          <header>
+            <p>step 1</p>
+            <div></div>
+          </header>
+          <p>
+            Heat olive oil in a large skillet over medium heat. Add onions, peppers, and garlic. Cook until softened, about 5 minutes.
+          </p>
+        </div>
+        
+        <div class="single-instruction">
+          <header>
+            <p>step 2</p>
+            <div></div>
+          </header>
+          <p>
+            Stir in the spices and tomato paste. Cook for 2 minutes, then pour in the crushed tomatoes. Simmer for 10 minutes until the sauce thickens slightly.
+          </p>
+        </div>
+       
+        <div class="single-instruction">
+          <header>
+            <p>step 3</p>
+            <div></div>
+          </header>
+          <p>
+            Make small wells in the sauce and crack the eggs into them. Cover and cook until the egg whites are set but the yolks are still runny, about 5-7 minutes.
+          </p>
+        </div>
+
+      </article>
+      <article class="second-column">
+        <div>
+          <h4>Ingredients</h4>
+          <br>
+          <p class="single-ingredient">2 tablespoons olive oil</p>
+          <p class="single-ingredient">1 onion, diced; 1 red bell pepper, chopped</p>
+          <p class="single-ingredient">2 cloves garlic, minced; 2 teaspoons paprika</p>
+          <p class="single-ingredient">1 teaspoon cumin; 1/4 teaspoon cayenne pepper</p>
+          <p class="single-ingredient">1 tablespoon tomato paste; 1 can (14 oz) crushed tomatoes; 4-6 large eggs</p>
+          <p class="single-ingredient">Salt and pepper to taste; Fresh parsley or cilantro for garnish</p>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <div class="rating-box">
+    <header>Rate the recipe</header>
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+    </div>
+  </div>
+
+  <hr>
+  <br>
+  <div class="recipe-page">
+    <section class="recipe-hero">
+      <img src="pics/recipe3.jpg" class="img recipe-hero-img" alt="Strawberry Banana Smoothie"/>
+      <article class="recipe-info">
+        <h2>Strawberry Banana Smoothie</h2>
+        <p>
+          The Strawberry Banana Smoothie is a refreshing and nutritious drink that combines the sweetness of ripe bananas with the tanginess of fresh strawberries, resulting in a delightful blend perfect for any time of day.
+        </p>
+        <div class="recipe-icons">
+          <article>
+            <i class="fas fa-clock"></i>
+            <h5>prep time</h5>
+            <p>5 min.</p>
+          </article>
+          <article>
+            <i class="far fa-clock"></i>
+            <h5>cook time</h5>
+            <p>0 min.</p>
+          </article>
+          <article>
+            <i class="fas fa-user-friends"></i>
+            <h5>serving</h5>
+            <p>2 servings</p>
+          </article>
+        </div>
+      </article>
+    </section>
+
+    <section class="recipe-content">
+      <article>
+        <h4>Instructions</h4>
+        <br>
+
+        <div class="single-instruction">
+          <header>
+            <p>step 1</p>
+            <div></div>
+          </header>
+          <p>
+            Add the ripe bananas, fresh strawberries, and milk into a blender.
+          </p>
+        </div>
+        
+        <div class="single-instruction">
+          <header>
+            <p>step 2</p>
+            <div></div>
+          </header>
+          <p>
+            Blend the ingredients until smooth and creamy.
+          </p>
+        </div>
+        
+        <div class="single-instruction">
+          <header>
+            <p>step 3</p>
+            <div></div>
+          </header>
+          <p>
+            Pour the smoothie into glasses and serve immediately. Enjoy your delicious and nutritious Strawberry Banana Smoothie!
+          </p>
+        </div>
+
+      </article>
+      <article class="second-column">
+        <div>
+          <h4>Ingredients</h4>
+          <br>
+          <p class="single-ingredient">2 ripe bananas</p>
+          <p class="single-ingredient">1 cup fresh strawberries</p>
+          <p class="single-ingredient">1 cup milk (any preferred type)</p>
+          <p class="single-ingredient">Optional: Honey or sweetener to taste</p>
+          <p class="single-ingredient">Ice cubes (optional)</p>
+        </div>
+      </article>
+    </section>
+  </div>
+  <div class="rating-box">
+    <header>Rate the recipe</header>
+    <div class="stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+    </div>
+  </div>
+</main>
+
+<div class="app">
+  <h1>Quiz</h1>
+  <div class="quiz">
+      <h2 id="question">
+      </h2>
+
+      <div id="answer-buttons">
+          <button class="btn-ans">Answer 1</button>
+          <button class="btn-ans">Answer 2</button>
+          <button class="btn-ans">Answer 3</button>
+          <button class="btn-ans">Answer 4</button>
+      </div>
+
+      <button id="next-btn">Next</button>
+  </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">contacts</a></li>
+                    <li><a href="#">terms of service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">news</a></li>
+                    <li><a href="#">features</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>recipes</h4>
+                <ul>
+                    <li><a href="#">cuisines</a></li>
+                    <li><a href="#">tips</a></li>
+                    <li><a href="#">ingredients</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<button id="scrollToTopBtn" onclick="scrollToTop()">
+  <i class="fas fa-arrow-up"></i> 
+</button>
+
+<!-- links to Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="js/recipes.js"></script>
+
+</body>
+</html>

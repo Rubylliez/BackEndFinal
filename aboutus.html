@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <!-- links to Bootstrap, Font Awesome, and CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- link to favicon -->
+    <link rel="icon" href="pics/favicon.png" type="image/x-icon">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+    <style>
+        @media (max-width: 991px) {
+            .contactUs {
+                padding: 20px;
+            }
+            .box {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: "form" "info" "map";
+            }
+            .map {
+                min-height: 300px;
+            }
+            .formBox .row50 {
+                display: flex;
+                gap: 0;
+                flex-direction: column;
+            }
+            .inputBox {
+                width: 100%;
+            }
+            .contact {
+                padding: 30px;
+            }
+            .map {
+                min-height: 300px;
+                padding: 0;
+            }
+        }
+        .wrapper-img {
+            max-width: 32%; 
+            float: left; 
+            border: 3px solid #000000; 
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+        .wrapper {
+            margin: 150px auto;
+            width: 70%;
+        }
+        .text-box h2 {
+            font-size: 42px;
+        }
+        .text-box p {
+            font-size: 16px;
+        }
+        section {
+            background-image: url(pics/faq.jpg);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid black;
+            margin-bottom: 80px;
+            border-radius: 30px;
+            width: 70%;
+            height: auto;
+            padding-bottom: 5%;
+        }
+        .title {
+            font-size: 3rem;
+            margin: 2rem 0rem;
+        }
+        .faq {
+            max-width: 70%;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid;
+            cursor: pointer;
+        }
+        .faq.active .answer {
+            max-height: 300px;
+            animation: fade 1s ease-in-out;
+        }
+        .question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .question h3 {
+            font-size: 1.8rem;
+        }
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.2s ease;
+        }
+        .answer p {
+            padding-top: 1rem;
+            line-height: 1.6;
+            font-size: 1.4rem;
+        }
+        .faq.active svg {
+            transform: rotate(180deg);
+        }
+        svg {
+            transition: transform 0.3s ease-in;
+        }
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+        @media (max-width: 768px) {
+            .wrapper-img {
+                max-width: 100%;
+                float: none;
+                margin-right: 0;
+            }
+            
+            .wrapper {
+                width: 90%;
+            }
+        }
+    </style>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="pics/favicon.png" height="60">
+            PizzaHub
+        </a>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="index.html" style="--i:0;">Home</a>
+            <a href="menu.html" style="--i:1;">Menu</a>
+            <a href="#" style="--i:2;">About us</a>
+            <a href="live.html" style="--i:3;">Live</a>
+            <a href="login.html" style="--i:4;">Account</a>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <img src="pics/favicon.png" class="wrapper-img" alt="photo">
+        <div class="text-box">
+            <h2>Welcome to PizzaHub!</h2>
+            <p>At PizzaHub, we're dedicated to delivering mouthwatering pizzas right to your doorstep. Our journey began with a passion for crafting the perfect pizza and a commitment to providing exceptional service.</p>
+            <p>Here at PizzaHub, you'll find a wide selection of delicious pizzas made with the finest ingredients and prepared by our expert chefs. Whether you crave classic flavors or adventurous toppings, we have something to satisfy every pizza lover's palate.</p>
+            <p>More than just a pizza delivery service, PizzaHub is a community hub where pizza enthusiasts can come together to share their love for great food. We value your feedback and strive to make every pizza experience memorable.</p>
+        </div>
+    </div>
+
+    <section>
+        <h2 class="title">Pizza Delivery FAQ</h2>
+        <div class="faq">
+            <div class="question">
+                <h3>What types of pizza do you offer for delivery?</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+                <p>Our pizza menu is extensive, featuring a wide range of flavors, crust options, and toppings. Whether you prefer classic Margherita or adventurous BBQ Chicken, we have something to satisfy your cravings.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>Do you deliver to my area?</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+                <p>We strive to reach as many locations as possible with our pizza delivery service. You can check if we deliver to your area by entering your address during the ordering process on our website.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="question">
+                <h3>How long does delivery take?</h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+                <p>Delivery times may vary depending on factors such as distance and order volume. However, we strive to deliver your piping hot pizza to your doorstep as quickly as possible, usually within 30-45 minutes.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="contactUs">
+        <div class="title">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="box">
+            <div class="contact form">
+                <h3> Become the owner of our franchise </h3>
+                <form>
+                    <div class="formBox">
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Fisrt Name</span>
+                                <input type="text" placeholder="Your First Name">
+                            </div>
+                            <div class="inputBox">
+                                <span>Last Name</span>
+                                <input type="text" placeholder="Your Last Name">
+                            </div>
+                        </div>
+
+                        <div class="row50">
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="text" placeholder="example@example.com">
+                            </div>
+                            <div class="inputBox">
+                                <span>Phone Number</span>
+                                <input type="text" placeholder="+7 777 777 7777">
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Recipe Idea</span>
+                                <textarea placeholder="Share your recipe idea..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <input type="submit" value="Send">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="contact info">
+                <h3>Contact Info</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><ion-icon name="location-outline"></ion-icon></span>
+                        <p>Uly Dala, Astana <br>KAZAKHSTAN</p>
+                    </div>
+                    <div>
+                        <span><ion-icon name="mail-open-outline"></ion-icon></span>
+                        <a href="mailto:pizzahub@gmail.com">pizzahub@gmail.com</a>
+                    </div>
+                    <div>
+                        <span><ion-icon name="call-outline"></ion-icon></span>
+                        <a href="tel:+7 777 777 7777">+7 777 777 7777</a>
+                    </div>
+                   
+                </div>
+            </div>
+
+
+            <div class="contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d885.8737722094235!2d71.42130028810251!3d51.096846506339034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245844e12b7ea8f%3A0xa514dd39c68bf086!2z0JbQmiDQkNGA0LzQsNC9INCa0LDQu9Cw!5e0!3m2!1sru!2skz!4v1700708794912!5m2!1sru!2skz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Submitted!</h2>
+        <p>Thanks for your submit. Our team will discuss it and will write to you personally by email as soon as possible.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">contacts</a></li>
+                        <li><a href="#">terms of service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">news</a></li>
+                        <li><a href="#">features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>pizzas</h4>
+                    <ul>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">specials</a></li>
+                        <li><a href="#">customize</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i> 
+    </button>
+
+    <!-- links to Bootstrap JS, Popper.js, and jQuery -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="js/aboutus.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const isLoggedIn = localStorage.getItem("token") !== null; // Проверяем, есть ли токен в localStorage
+        const accountLink = document.querySelector('a[href="login.html"]'); // Находим ссылку на страницу входа
+        if (isLoggedIn) {
+            accountLink.href = 'profile.html'; // Если пользователь авторизован, изменяем ссылку на страницу профиля
+        }
+    });
+    </script>
+</body>
+</html>
